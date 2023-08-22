@@ -1,9 +1,3 @@
-# How to create any file in window using powershell?
-- `ni` is the command to create a new file in powershell. 
-- ex: `ni index.js`
-
-# How to remove any file in window using powershell?
-- `rm` is the command to remove a file in powershell.
 
 # What is API?
 - It is _Applicatoin Programming Interface_. Now, let's break them down a little bit. 
@@ -18,10 +12,14 @@
 - ease of programming for both client and server, and efficiency execution.
 
 
-
-
 # miscellaneous
 - There are mainly TWO MAJOR problmes
     1. All software are extremely diffcult to change.
     2. Software systems are diffuclt to integrate.
     
+### How to create any file in window using powershell?
+- `ni` is the command to create a new file in powershell. 
+- ex: `ni index.js`
+
+### How to remove any file in window using powershell?
+- `rm` is the command to remove a file in powershell.

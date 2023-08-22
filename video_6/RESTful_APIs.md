@@ -23,12 +23,18 @@
 
 # Architectural constraints
 - The Formal REST constraints are:
-    1.Client-server architecture : 
-    2. Statelessness : A stateless protocol is a communication protocol in which no session information is retained by the receiver, usually a server.
+    1.**Client-server architecture** : 
+    2. **Statelessness** : A stateless protocol is a `communication protocol` in which no session information is retained by the receiver, usually a server.
         - Relevent session data is sent to the receiver by the client in such a way that every packet of information transferred can be understood in isolation, without context information from previous packets in the session.
-    3. Chacheablility : Clients and intermediaries can cache responses. Responses must, implicitly or explicitly, define themselves as either cacheable or non-cacheabl to prevetn clients from providing state or inappropriate data in response to further requests.
+    3. **Chacheablility** : `Clients` and `intermediaries` can cache responses. Responses must, _implicitly_ or _explicitly_, define themselves as either cacheable or non-cacheable to prevent clients from providing state or inappropriate data in response to further requests.
         - Well-managed caching partially or completely eliminates some client-server interactions, further improving scalability and performance.
-    4. Layered system : 
+    4. **Layered system** : A client cannot tell whether it is connected to the end server or to an intermediary along the way.
+        - If a **proxy** or **load balancer** is placed between the client and the server, it won't affect their communications, and there won't be a need to update the client and server side code.
+        - `Intermediary servers` can improve system _scalability_ by enabling `load balancing` and by providing shared caches.
+    5. **Code on demand** (optional) : Servers can temporarily extend or customize the functionality of a client by transferring executable code.
+        - This simplifies clients by reducing the number of features required to be pre-implemented.
+        - It also improves system extensibility by providing a well-known location for code on demand.
+    6. **Uniform interface** : 
 
 # Miscellenous
 1. [Read](https://www.ics.uci.edu/~fielding/pubs/dissertation/software_arch.htm) about RESTful APIs
